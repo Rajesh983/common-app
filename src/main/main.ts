@@ -209,7 +209,7 @@ app.on('window-all-closed', () => {
 });
 
 
-if (process.platform === 'win32') {
+if (process.platform === 'win32' || process.platform === 'linux') {
     const isSingleInstance = app.requestSingleInstanceLock();
     if (!isSingleInstance) {
         app.quit();
