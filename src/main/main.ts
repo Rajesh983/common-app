@@ -300,6 +300,6 @@ if (process.platform === 'darwin') {
 } else {
     app.setLoginItemSettings({
         openAtLogin: true,
-
+        args: ['--process-start-args', `"--hidden"`],
     });
 }
