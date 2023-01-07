@@ -1,0 +1,16 @@
+{
+  "name": "alpine-app",
+  "author": {
+    "name": "8800",
+    "email": "thealpinecode@gmail.com"
+  },
+  "email": "thealpinecode@gmail.com",
+  "version": "4.6.0",
+  "description": "Engineering Management Platform",
+  "main": "./dist/main/main.js",
+  "scripts": {
+    "rebuild": "node -r ts-node/register ../../.alpine/scripts/electron-rebuild.js",
+    "postinstall": "npm run rebuild && npm run link-modules",
+    "link-modules": "node -r ts-node/register ../../.alpine/scripts/link-modules.ts"
+  }
+}
